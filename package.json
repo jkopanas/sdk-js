@@ -1,10 +1,11 @@
 {
-  "name": "@paxful/sdk-js",
+  "name": "sdk-js",
   "version": "0.3.1",
   "description": "Paxful javascript SDK",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "prepare": "npm run build",
     "prepublishOnly": "tsc",
     "build": "rimraf ./dist && tsc",
     "start:dev": "nodemon",
