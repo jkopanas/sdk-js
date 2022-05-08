@@ -2,5 +2,6 @@ junit.xml
 build
 node_modules
 public
+dist
 .idea
 coverage
