@@ -72,7 +72,11 @@ export class RequestBuilder {
     public withMultipartFormData(payload: InvokeBody): RequestBuilder {
         const form: FormData = new FormData();
         Object.keys(payload).forEach((key) => {
-            form.append(key, payload[key]);
+            if (typeof payload[key] === 'object') {
+                form.append(key, payload[key].value, payload[key].config);
+            } else {
+                form.append(key, payload[key]);
+            }
         })
         this.init.body = form
         return this
