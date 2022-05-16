@@ -56,7 +56,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/paxful/sdk-js.git"
+    "url": "git+ssh://git@github.com/jkopanas/sdk-js.git"
   },
   "bugs": {
     "url": "https://github.com/paxful/sdk-js/issues"
