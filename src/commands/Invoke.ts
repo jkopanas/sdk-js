@@ -27,7 +27,7 @@ export function containsBinary(payload: InvokeBody) : boolean {
     let isBinary = false;
     Object.values(payload).map(value => {
         if (isBinary) return;
-        if (value instanceof Buffer || value instanceof ReadStream) {
+        if (value.value instanceof Buffer || value.value instanceof ReadStream) {
             isBinary = true;
         }
     });
