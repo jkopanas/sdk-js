@@ -25,9 +25,10 @@ const CONTENT_TYPE_HEADER = "Content-Type";
 
 export function containsBinary(payload: InvokeBody) : boolean {
     let isBinary = false;
-    Object.values(payload).map(value => {
+    Object.values(payload).map((v: any) => {
         if (isBinary) return;
-        if (value.value instanceof Buffer || value.value instanceof ReadStream) {
+       
+        if (v.value instanceof Buffer || v.value instanceof ReadStream) {
             isBinary = true;
         }
     });
